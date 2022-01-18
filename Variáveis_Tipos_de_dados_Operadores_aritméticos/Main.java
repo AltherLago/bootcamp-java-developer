@@ -83,12 +83,10 @@ public class Main {
         prePos();
         System.out.println("Arithmetic" + "\n");
         arithmetic();
-        /*
-        System.out.println("Assignment");
+        System.out.println("Assignment" + "\n") ;
         assignment();
-        System.out.println("Precedence");
+        System.out.println("Precedence" + "\n");
         precedence();
-        */
     }
 
     private static void prePos() {
@@ -106,7 +104,6 @@ public class Main {
         
     }
     
-
     private static void arithmetic() {
     
         int a = 10;
@@ -126,6 +123,63 @@ public class Main {
         System.out.println("d*b: " + r3);
         System.out.println("e/a: " + r4);
         System.out.println("c%d: " + r5);
-    
+        System.out.println();    
     }
-}   
+
+    private static void assignment() {
+        
+        int i    = 1500;
+        short j  = 15;
+        long l   = 500L;
+        int k    = 35;
+        float f  = 3.5f;
+        double d = f;
+
+        System.out.println("d: " + d);
+
+        i += 5;
+        j -= 3;
+        d /= 2.7d;
+        l *= 3;
+        k %= 2;
+
+        System.out.println("i: " + i);   
+        System.out.println("j: " + j);   
+        System.out.println("d: " + d);   
+        System.out.println("l: " + l);   
+        System.out.println("k: " + k);   
+    
+        i = k = j;
+
+        
+        System.out.println("k: " + k);   
+        System.out.println("i: " + i);   
+
+    }
+
+    private static void precedence() {
+
+        int i = 10;
+        int j = 20;
+        int k = 30;
+
+        int a = i++ + --j * k;
+
+        System.out.println("i++ + --j + k: " + a);
+
+        System.out.println("i: " + i);
+
+        int b = k / --i % 3 + 1;
+
+        System.out.println("k / --i % 3 + 1: " + b);
+        
+        System.out.println("i: " +  i);
+
+        int c = 2;
+
+        c *= i += 5;
+
+        System.out.println("c *= i += 5: " + c);
+    }
+}
+
